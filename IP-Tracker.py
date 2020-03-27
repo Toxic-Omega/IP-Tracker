@@ -36,17 +36,16 @@ api = "http://ip-api.com/json/"
 try:
         data = requests.get(api+ip).json()
         sys.stdout.flush()
-        a = lgreen+bold+"[~]"
-        b = cyan+bold+"[~]"
-        print (a, "[Victim]:", data['query'])
-        print (b, "[ISP]:", data['isp'])
-        print (a, "[Organisation]:", data['org'])
-        print (b, "[City]:", data['city'])
-        print (a, "[Region]:", data['region'])
-        print (b, "[Longitude]:", data['lon'])
-        print (a, "[Latitude]:", data['lat'])
-        print (b, "[Time zone]:", data['timezone'])
-        print (a, "[Zip code]:", data['zip'])
+        a = lgreen"[+]"
+        print (a, "Victim :", data['query'])
+        print (a, "ISP :", data['isp'])
+        print (a, "Organisation :", data['org'])
+        print (a, "City :", data['city'])
+        print (a, "Region :", data['region'])
+        print (a, "Longitude :", data['lon'])
+        print (a, "Latitude :", data['lat'])
+        print (a, "Time Zone :", data['timezone'])
+        print (a, "Zip Code :", data['zip'])
 
 except KeyboardInterrupt:
         print ("Exiting...")
