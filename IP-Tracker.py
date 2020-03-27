@@ -51,8 +51,8 @@ try:
         print ("\033[0m")
 
 except KeyboardInterrupt:
-        print ("Exiting...")
+        print ("\033[92mExiting...\033[0m")
         sys.exit(0)
 except requests.exceptions.ConnectionError as e:
-        print ("Please Chack Your Internet Connection!")
+        print ("\033[92mPlease Chack Your Internet Connection!\033[0m")
 sys.exit(1)
