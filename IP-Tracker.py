@@ -36,7 +36,7 @@ api = "http://ip-api.com/json/"
 try:
         data = requests.get(api+ip).json()
         sys.stdout.flush()
-        a = lgreen"[+]"
+        a = lgreen "[+]"
         print (a, "Victim :", data['query'])
         print (a, "ISP :", data['isp'])
         print (a, "Organisation :", data['org'])
