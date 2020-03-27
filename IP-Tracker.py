@@ -19,13 +19,15 @@ clear = '\033[0m'
 bold = '\033[01m'
 cyan = '\033[96m'
 
-print("""
-IP-Tracker
-
-
-
-
-
+print("""\033[31m
+██╗██████╗               ████████╗██████╗  █████╗  ██████╗██╗  ██╗███████╗██████╗ 
+██║██╔══██╗              ╚══██╔══╝██╔══██╗██╔══██╗██╔════╝██║ ██╔╝██╔════╝██╔══██╗
+██║██████╔╝    █████╗       ██║   ██████╔╝███████║██║     █████╔╝ █████╗  ██████╔╝
+██║██╔═══╝     ╚════╝       ██║   ██╔══██╗██╔══██║██║     ██╔═██╗ ██╔══╝  ██╔══██╗
+██║██║                      ██║   ██║  ██║██║  ██║╚██████╗██║  ██╗███████╗██║  ██║
+╚═╝╚═╝                      ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝  \033[92mV.1.0
+                                                                                  
+                              \033[96mCoded By Toxic - Omega                                                 
 """)
 
 
@@ -36,7 +38,7 @@ api = "http://ip-api.com/json/"
 try:
         data = requests.get(api+ip).json()
         sys.stdout.flush()
-        b = lgreen+bold+"[+]"
+        a = lgreen+bold+"[+]"
         print (a, "\033[31mVictim :", data['query'])
         print (a, "\033[31mISP :", data['isp'])
         print (a, "\033[31mOrganisation :", data['org'])
@@ -46,6 +48,7 @@ try:
         print (a, "\033[31mLatitude :", data['lat'])
         print (a, "\033[31mTime Zone :", data['timezone'])
         print (a, "\033[31mZip Code :", data['zip'])
+        print ("\033[0m")
 
 except KeyboardInterrupt:
         print ("Exiting...")
